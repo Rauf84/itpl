@@ -9,16 +9,17 @@
         
     
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-        <link rel="stylesheet" href="style.css" />
-        <script src="contact.js" async></script>
+        <link rel="stylesheet" href="style.css" />    
+        <title>ITPL | Home</title>
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-            <script type="text/javascript">
+        <script type="text/javascript">
             (function() {
             emailjs.init("user_H4ShMUDOPIH6dfLxQzbdf");
             })();
         </script>
-    
-        <title>ITPL | Home</title>
+        <script src="contact.js" async></script>
     </head>
 
     <body>
@@ -40,18 +41,29 @@
                 </a>
             </div>    
         </header>
+        
         <section>
-            <div id="message-container"></div>
-            <form id="send-container">
-                <input type = "text" id="from_name" placeholder="Enter your name">
-                <input type = "text" id="to_name" placeholder="Enter your name">
-                <input type = "text" id="message" placeholder="Enter your message">
-                <button onclick='sendMail()'>Send</button>
-            </form>
+
+            <div class="form">
+                <label for="">email to</label><br/>
+                <input type="text" id="email_to"><br/>
+                <label for="">From</label><br/>
+                <input type="text" id="from_name"><br/>
+                <label for="">message</label><br/>
+                <textarea id="message"></textarea><br/>
+                <button class="send">Send</button>
+            </div>
+
+            <!--Email Js-->
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+            <script type="text/javascript">
+            (function() {
+            emailjs.init("user_H4ShMUDOPIH6dfLxQzbdf");
+            })();
+            </script>
 
         </section>
 
-        
         <hr>
 
         <footer class="footer">
