@@ -4,7 +4,6 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Comfortaa', cursive;
 }
 
 
@@ -15,6 +14,7 @@ html body {
 
 .nav ul {
     margin: 0;
+    padding: 0ex;
 }
 
 .nav li {
@@ -35,9 +35,11 @@ html body {
 }
 
 .main-header {
-    background: linear-gradient(rgba(255, 255, 255, 80), rgba(0,0,0,80)) ;
-    background-size: cover;
-    padding-bottom: 5px;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+
+    
     color: #b8590b;
     text-align: center;
     font-size: 1.2em;
@@ -50,14 +52,12 @@ html body {
 }
 
 .main-header li {
-    padding: 0 5%;
+    padding: 0 0%;
 }
 
 .ITPL-logo {
     display: inline-block;
-    font-family: 'Orbitron', sans-serif;
     font-family: 'Righteous', cursive;
-    font-size: 3.5em;
 }
 
 .content-section{
@@ -126,19 +126,50 @@ html body {
     background-color: rgba(255,255,255,.8);
 }
 
-@media screen and (max-width: 465px){
+@media screen and (max-width: 360px){
     .main-header {
-        font-size: 0.9em;
-        margin-top: 0.5em;
+        position: sticky;
+        margin-top: 0;
+        text-align: none;
+        
     }
     
-    .favico-header {
-        width: 2.5em;
-        
-      }
-    .ITPL-logo {
-        font-size: 1.8em;
+    .logo {
+        height: 30px;
+        background-color: black;
+    }
+    .nav{
+        height: 30px;
+        background-color: black;
+    }
+
+    .nav ul {
+        position: absolute;
+        top: 10px;
+        margin-left: 80px;
+        font-family: 'Righteous', cursive;
+        font-size: 18px;
+    }
+
+    .favico-header {        
         margin: 0;
+        border: 0;
+        padding: 0;
+        width: 50px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+      }
+
+    .ITPL-logo {
+        margin: 0;
+        border: 0;
+        padding: 0;
+        width: 10px;
+        font-size:15px;
+        position: absolute;
+        top: 35px;
+        left: 18px;
     }
 
     .footer-logo {
@@ -157,6 +188,84 @@ html body {
         font-size: 0.8em;
         display: inline;
         padding: 0 1%;
-        
     }
+
+    h3 {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 30px; 
+        font-family: 'Righteous', cursive;
+        color: hsl(35, 66%, 18%);
+    }
+
+    p{
+        text-align: center;
+        margin-top: 0;
+        font-size: 15px; 
+        font-family: 'Righteous', cursive;
+        color: hsl(35, 66%, 18%);
+    }
+    .contact-form {
+        margin: 35px auto 0px auto;
+        width: 80%;
+    }
+    .contact-form label {
+        font-size: 20px;
+        display: inline-block;
+        margin-bottom: 10px;
+        font-family: 'Righteous', cursive;
+      }
+      
+      .contact-form input {
+        padding: 12px 20px;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid #ccc;
+        background: rgb(255, 255, 255);
+        font-size: 18px;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      
+      .contact-form input:focus {
+        border-bottom: 2px solid #1a883f;
+      }
+      
+      .contact-form textarea {
+        padding: 12px 20px;
+        outline:darkgray;
+        border:darkgray;
+        border-bottom: 2px solid #ccc;
+        background: rgb(255, 255, 255);
+        font-size: 18px;
+        border-radius: 3px;
+        width: 100%;
+        font-family: inter;
+        font-weight: normal;
+      }
+      
+      .contact-form textarea:focus {
+        border-bottom: 2px solid #1a883f;
+      }
+      
+      .contact-form button {
+        font-size: 19px;
+        width: 100%;
+        margin-top: 25px;
+        border: none;
+        padding: 12px 20px;
+        background-color: #22b352;
+        color: #fff;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        border-bottom: 3px solid #1a883f;
+      }
+      
+      .contact-form button:hover {
+        background-color: #1a883f;
+        border-bottom: 3px solid #22b352;
+      }
 }

@@ -24,14 +24,6 @@
 
     <body>
         <header class ="main-header">
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html"> Home </a></li>
-                    <li><a href="about.html">About us</a> </li>
-                    <li><a href="contact.html">Contact</a> </li>
-                </ul>
-            </nav>
-            <hr>
             <div class="logo">
                 <a href="index.html">
                     <img class = "favico-header" src="img/favicon.ico">
@@ -39,19 +31,32 @@
                         ITPL
                     </h1>
                 </a>
-            </div>    
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html"> Home </a></li>
+                    <li><a href="about.html">About us</a> </li>
+                    <li><a href="contact.html">Contact</a> </li>
+                </ul>
+            </nav>   
         </header>
         
         <section>
 
             <div class="form">
-                <label for="">email to</label><br/>
-                <input type="text" id="email_to"><br/>
-                <label for="">From</label><br/>
-                <input type="text" id="from_name"><br/>
-                <label for="">message</label><br/>
-                <textarea id="message"></textarea><br/>
-                <button class="send">Send</button>
+                <h3>Contact us</h3>
+                <p>Send a message and we will get back to you within 24 hours</p>
+                
+                <div class="contact-form">
+                    <label for="">Name</label><br/>
+                    <input class="name" type="text" id="from_name" placeholder="ex. Steve Jobs"><br/>
+                    <label for="">Email</label><br/>
+                    <input class="email" type="text" id="from_email" placeholder="myname@company.com"><br/>
+                    <label for="">Message</label><br/>
+                    <textarea class="msg" id="message" placeholder="Type your message here ..."></textarea><br/>
+                    <button class="send">Send</button>
+                </div>
+
             </div>
 
             <!--Email Js-->
